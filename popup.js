@@ -150,18 +150,22 @@ class TypeWriter {
     
     });
   
-    Function myFun(){
+//     Function myFun(){
+// var correct_var =/ ^[A-Za-z] +$/;
+// var a =document.getElementById("message"). Value;
+// if (a===""){
+//   document.getElementById ("error").innerHTML="** please fill the answer";
+//   retrun false;
+// }
 
-var a =document.getElementById("message"). Value;
-if (a===""){
-  document.getElementById ("error").innerHTML="** please fill the answer";
-  retrun false;
-}
-
-if(a.length<3)
-document.getElementById("error").innerHTML='**username must be 3charchter';
-return false;
-
+// if(a.length<3){
+// document.getElementById("error").innerHTML='**username must be 3charchter';
+// return false;
+// }
+// if(a.length>20){
+//   document.getElementById ("error").innerHTML="**usernsme mustbe  3charchter";
+//   return false;
+// }
 
 
-    }
+//     }
