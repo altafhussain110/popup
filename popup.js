@@ -72,7 +72,7 @@ class TypeWriter {
     //$('.form-popup-bg').removeClass('is-visible');
     window.open("#popup2","_self");
     $("#answer").append("");
-    $("#answer").append($("#message").val());
+    // $("#answer").append($("#message").val());
   }
 
 
