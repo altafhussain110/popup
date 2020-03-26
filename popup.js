@@ -9,13 +9,13 @@ class TypeWriter {
       this.type();
       this.isDeleting = false;
     }
-  
+
     type() {
       // Current index of word
       const current = this.wordIndex % this.words.length;
       // Get full text of current word
       const fullTxt = this.words[current];
-  
+
       // Check if deleting
       if(this.isDeleting) {
         // Remove char
@@ -24,17 +24,17 @@ class TypeWriter {
         // Add char
         this.txt = fullTxt.substring(0, this.txt.length + 1);
       }
-  
+
       // Insert txt into element
       this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-  
+
       // Initial Type Speed
-      let typeSpeed = 300;
-  
+      let typeSpeed = 100;
+
       if(this.isDeleting) {
         typeSpeed /= 2;
       }
-  
+
       // If word is complete
       if(!this.isDeleting && this.txt === fullTxt) {
         // Make pause at end
@@ -48,15 +48,15 @@ class TypeWriter {
         // Pause before start typing
         typeSpeed = 500;
       }
-  
+
       setTimeout(() => this.type(), typeSpeed);
     }
   }
-  
-  
+
+
   // Init On DOM Load
   document.addEventListener('DOMContentLoaded', init);
-  
+
   // Init App
   function init() {
     const txtElement = document.querySelector('.txt-type');
@@ -68,20 +68,23 @@ class TypeWriter {
   function closeForm() {
     $('.form-popup-bg').removeClass('is-visible');
   }
-  function SubmiteForm() {
-    $('.form-popup-bg').removeClass('is-visible');
+  function SubmitForm() {
+    //$('.form-popup-bg').removeClass('is-visible');
+    window.open("#popup2","_self");
+    $("#answer").append("");
+    $("#answer").append($("#message").val());
   }
-  
-  
+
+
   $(document).ready(function($) {
-    
+
     /* Contact Form Interactions */
     $('#btnOpenForm').on('click', function(event) {
       event.preventDefault();
-  
+
       $('.form-popup-bg').addClass('is-visible');
     });
-    
+
       //close popup when clicking x or off popup
     $('.form-popup-bg').on('click', function(event) {
       if ($(event.target).is('.form-popup-bg') || $(event.target).is('#btnCloseForm')) {
@@ -89,10 +92,9 @@ class TypeWriter {
         $(this).removeClass('is-visible');
       }
     });
-    
 
 
-    
-    
+
+
+
     });
- 
